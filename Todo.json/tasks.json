@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tasks": [
+    {
+      "text": "1",
+      "creationTime": "2/24/2024, 4:36:51 PM",
+      "id": "_f47dgbd29"
+    },
+    {
+      "text": "2",
+      "creationTime": "2/24/2024, 4:36:53 PM",
+      "id": "_whkeizr81"
+    },
+    {
+      "text": "3",
+      "creationTime": "2/24/2024, 4:36:55 PM",
+      "id": "_lllouzk09"
+    }
+  ]
+}

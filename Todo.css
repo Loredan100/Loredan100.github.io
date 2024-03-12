@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(#68eacc, #497be8, #7a00ff, #ff00c8);
+}
+
+.container {
+  margin: 120px auto;
+  max-width: 400px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.container .inputField {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.inputField input {
+  outline: none;
+  width: 85%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField button {
+  width: 50px;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background: #8e49e8;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  position: relative;
+  z-index: 0;
+}
+
+.inputField button:before,
+.footer button:before {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  content: "";
+  position: absolute;
+  background-size: 500%;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inputField button:active,
+.footer button:active {
+  color: red;
+}
+
+.inputField button:active:after,
+.footer button:active:after {
+  background: transparent;
+}
+
+.inputField button:hover:before,
+.footer button:hover:before {
+  opacity: 1;
+}
+
+.inputField button:after,
+.footer button:after {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.container .todoList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todoList li {
+  list-style: none;
+  position: relative;
+  background: rgb(236, 232, 232);
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  word-wrap: break-word;
+  overflow: hidden;
+  cursor: default;
+  text-align: center;
+}
+
+#removebtn {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 45px;
+  padding-left: 0;
+  color: #fff;
+  width: 45px;
+  text-align: center;
+  border-radius: 0 3px 3px 0;
+  background: rgb(231, 45, 45);
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  z-index: 0;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+#removebtn:before {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#removebtn:active {
+  color: rgb(231, 45, 45);
+}
+
+#removebtn:active::after {
+  background: transparent;
+}
+
+#removebtn:hover:before {
+  opacity: 1;
+}
+
+#removebtn::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(231, 45, 45);
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#removebtn::after .container .footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #8e49e8;
+  cursor: pointer;
+  user-select: none;
+  float: right;
+  position: relative;
+  z-index: 0;
+}
+
+.todoList {
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+#checkbtn {
+  position: absolute;
+  left: -5px;
+  top: 0px;
+  font-size: 2rem;
+  padding-left: 6px;
+  padding-right: 0;
+  color: #fff;
+  width: 45px;
+  text-align: center;
+  background: rgb(33, 209, 33);
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  z-index: 0;
+
+  font-weight: 500;
+}
+
+#checkbtn:before {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#checkbtn:active {
+  color: rgb(33, 209, 33);
+}
+
+#checkbtn:active::after {
+  background: transparent;
+}
+
+#checkbtn:hover:before {
+  opacity: 1;
+}
+
+.popup {
+  position: absolute;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  z-index: 9999;
+  background: linear-gradient(45deg, #68eacc, #497be8, #7a00ff, #ff00c8);
+  border-radius: 10px;
+}

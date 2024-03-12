@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="Todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>My tasks</header>
+      <span id="checkbtn"></span>
+      <div class="inputField">
+        <input type="text" id="myTask" placeholder="Add your task" />
+
+        <button onclick="addTask()" id="addBtn">+</button>
+      </div>
+      <ul ondblclick="edit(event)" class="todoList" id="todos"></ul>
+
+      <div class="footer">
+        <span>You have <span id="pendingTasks">0</span> pending tasks</span>
+
+        <button onclick="clearAll()" id="clear">Clear All</button>
+        <button onclick="document.location='allTasks.html'">All tasks</button>
+      </div>
+    </div>
+    <script src="Todo.js"></script>
+  </body>
+</html>
